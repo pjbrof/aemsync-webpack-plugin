@@ -1,6 +1,6 @@
 {
   "name": "@pjbrof/aemsync-webpack-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "aemsync webpack plugin updated for Adobe AEM 6.4",
   "main": "index.js",
   "scripts": {
