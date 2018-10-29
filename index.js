@@ -2,34 +2,22 @@ var aemsync = require('aemsync');
 var chalk = require('chalk');
 
 var initAemSyncWatcher = function(options){
-    var pushInterval = options.pushInterval || 300;
+    var targets = options.targets || 'http://admin:admin@localhost:4502';
+    var interval = options.interval || 300;
     var exclude = options.exclude || '';
+    var workingDir = options.workingDir || './';
 
-    if(!(options && options.targets.length)){
-        console.error(chalk.red('AemSync targets property missing!'));
-        return;
-    }
-    else if(!(options && options.watchDir)){
-        console.error(chalk.red('AemSync workingDir property missing!'));
-        return;
-    }
-
-    var onPushEnd = function(err, host) {
-        if (err) {
-            return console.log('Error when pushing package', err);
-        }
-        console.log('Package pushed to' + host)
-    };
-
-    var push = new aemsync.push(options.targets, pushInterval, onPushEnd);
+    var pipeline = new aemsync.Pipeline(options);
     var watcher = new aemsync.Watcher();
 
-    push.start();
-    watcher.watch(options.watchDir, exclude, function(localPath){
-        push.enqueue(localPath)
-    });
-};
+    pipeline.start();
+    
+    options.callback = (localPath) => {
+        pipeline.enqueue(localPath);
+    }
 
+    watcher.watch(options);
+};
 
 function AemSyncPlugin(options) {
     this.options = options;
