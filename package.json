@@ -1,0 +1,23 @@
+{
+  "name": "aemsync-webpack-plugin",
+  "version": "1.0.0",
+  "description": "aemsync webpack plugin updated for Adobe AEM 6.4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "adobe",
+    "aem",
+    "6.4",
+    "aemsync",
+    "webpack",
+    "aemsync-webpack-plugin"
+  ],
+  "author": "Patrick Brophy",
+  "license": "MIT",
+  "dependencies": {
+    "aemsync": "^3.0.2",
+    "chalk": "^2.4.1"
+  }
+}
