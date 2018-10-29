@@ -1,5 +1,4 @@
 var aemsync = require('aemsync');
-var chalk = require('chalk');
 
 var initAemSyncWatcher = function(options){
     var targets = options.targets || 'http://admin:admin@localhost:4502';

@@ -1,5 +1,5 @@
 {
-  "name": "aemsync-webpack-plugin",
+  "name": "@pjbrof/aemsync-webpack-plugin",
   "version": "1.0.0",
   "description": "aemsync webpack plugin updated for Adobe AEM 6.4",
   "main": "index.js",
@@ -17,7 +17,6 @@
   "author": "Patrick Brophy",
   "license": "MIT",
   "dependencies": {
-    "aemsync": "^3.0.2",
-    "chalk": "^2.4.1"
+    "aemsync": "^3.0.2"
   }
 }
