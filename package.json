@@ -1,8 +1,9 @@
 {
   "name": "@pjbrof/aemsync-webpack-plugin",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "aemsync webpack plugin updated for Adobe AEM 6.4",
   "main": "index.js",
+  "repository": "https://github.com/pjbrof/aemsync-webpack-plugin.git",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
